@@ -35,7 +35,6 @@ export const createUser = async ( req, res ) => {
 
     try {
         const newUser = await User.create({
-            uid,
             email,
             password
         });
@@ -59,7 +58,6 @@ export const updateUsers = async ( req, res ) => {
     } catch (error) {
         return res.status(500).json({ message: error.message });
     }
-
 };
 
 export const deleteUsers = async ( req, res ) => {
@@ -76,5 +74,3 @@ export const deleteUsers = async ( req, res ) => {
         return res.status(500).json({ message: error.message });
     }
 };
-
-

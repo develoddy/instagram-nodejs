@@ -19,7 +19,8 @@ export const Profile = sequelize.define('profile', {
         type: DataTypes.STRING
     },
     emailVerified: {
-        type: DataTypes.BOOLEAN
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
     },
     phone: {
         type: DataTypes.STRING
