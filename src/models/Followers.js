@@ -7,8 +7,10 @@ export const Followers = sequelize.define('followers', {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
+    }, 
+    userId: {
+        type: DataTypes.INTEGER
     },
-    userId : type.INTEGER,
 }, {
     timestamps: true
 });
