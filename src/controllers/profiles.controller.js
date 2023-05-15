@@ -1,4 +1,5 @@
 import { Profile } from '../models/Profile.js';
+import { Post } from '../models/Post.js';
 
 export const getProfiles = async ( req, res ) => {
     try {
@@ -75,3 +76,12 @@ export const deleteProfiles = async ( req, res ) => {
     }
 };
 
+export const getProfilesPosts = async (req, res) => {
+    const { id } = req.params;
+
+    const posts =await Post.findAll({
+        where: { profileId: id },
+    });
+
+    res.json(posts);
+};
