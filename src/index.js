@@ -1,9 +1,6 @@
 import app from './app.js';
 import {sequelize} from './database/database.js';
 
-//import './models/User.js';
-//import './models/Profile.js';
-//import './models/Post.js';
 
 // En este punto se arranca la aplicación.
 async function main() {
