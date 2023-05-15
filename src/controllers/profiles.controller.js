@@ -76,12 +76,16 @@ export const deleteProfiles = async ( req, res ) => {
     }
 };
 
+/**
+ * Buscar cuantas publicaciones tiene un determinado perfil.
+ * @param {*} req 
+ * @param {*} res 
+ */
 export const getProfilesPosts = async (req, res) => {
     const { id } = req.params;
 
-    const posts =await Post.findAll({
+    const posts = await Post.findAll({
         where: { profileId: id },
     });
-
     res.json(posts);
 };
