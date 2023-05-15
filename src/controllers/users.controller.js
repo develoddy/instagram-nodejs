@@ -31,7 +31,7 @@ export const getUser = async ( req, res ) => {
 };
 
 export const createUser = async ( req, res ) => {
-    const { uid, email, password } = req.body;
+    const { email, password } = req.body;
 
     try {
         const newUser = await User.create({
